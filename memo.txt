@@ -1,3 +1,42 @@
 --build
 
 pyinstaller --onefile your_script.py
+
+C:/Users/Jim/AppData/Local/Programs/Python/Python312/python.exe 
+
+
+
+
+
+
+
+
+
+C:/Users/Jim/AppData/Local/Programs/Python/Python312/python.exe manage.py runserver
+
+C:/Users/Jim/AppData/Local/Programs/Python/Python312/python.exe manage.py makemigrations
+C:/Users/Jim/AppData/Local/Programs/Python/Python312/python.exe manage.py migrate
+
+
+
+--run configuration
+
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python 偵錯工具: 目前檔案",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "D:\\MyPython\\CreateDailyPPSMFolders\\config.properties"
+            ],
+        }
+    ]
+}
+
