@@ -107,7 +107,10 @@ def createWebLogTodayDateFolder():
     else:
         print(f"Directory {webLogpath} already exists.")
 
-    three_days_ago = datetime.now().date() - timedelta(days=3)
+    three_days_ago = datetime.now().date() - timedelta(days=int(PropertyLoader.get_property(
+        "nDaysAgo")))
+
+    print(f"Clear folder before Date:  {three_days_ago}")
 
     # 列出目标目录下的所有文件夹
     foldersInWebJbossServerLog = os.listdir(
