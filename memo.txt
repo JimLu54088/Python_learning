@@ -2,6 +2,10 @@
 
 pyinstaller --onefile your_script.py
 
+example: PS D:\MyPython\CreateDailyPPSMFolders> pyinstaller --onefile ppssmDailyMorningCHK.py
+
+executable file is in dist folder
+
 C:/Users/Jim/AppData/Local/Programs/Python/Python312/python.exe 
 
 
