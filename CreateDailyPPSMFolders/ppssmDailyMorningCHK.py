@@ -9,6 +9,8 @@ import shutil
 
 
 def main():
+    # print datetime now for logging.
+    print("\n" + datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     print("----------Process started ------------")
 
     parser = argparse.ArgumentParser(description='Process property file.')
@@ -16,10 +18,6 @@ def main():
                         help='Path to the property file')
 
     args = parser.parse_args()
-
-    if not args.property_file:
-        print("ERROR: Property File Name is not given. Please provide info -Dproperty.file=<Path of property file>", file=sys.stderr)
-        sys.exit(-1)
 
     PropertyLoader.property_file_path = args.property_file
     PropertyLoader.load_properties()
