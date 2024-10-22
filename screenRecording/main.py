@@ -4,15 +4,21 @@ import pyautogui
 import time
 import sys
 import keyboard
+from datetime import datetime
 
 
 def main():
     print("Recording Start.")
+
+    # 獲取當前時間，並格式化為指定的字串格式
+    current_time_str = datetime.now().strftime('%Y%m%d%H%M%S')
+
     # 設定錄影參數
     screen_size = pyautogui.size()  # 獲取螢幕解析度
     fps = 20.0  # 設定幀率
     fourcc = cv2.VideoWriter_fourcc(*"XVID")  # 使用 XVID 編碼
-    output = cv2.VideoWriter("screen_recording.avi", fourcc, fps, screen_size)
+    output = cv2.VideoWriter(
+        "screen_recording" + current_time_str + ".avi", fourcc, fps, screen_size)
 
     # 開始錄影
     start_time = time.time()
